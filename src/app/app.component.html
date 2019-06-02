@@ -5,10 +5,10 @@
   </mat-toolbar>
   <div>Your city, your forecast, right now!</div>
   <div>
-    <app-city-search></app-city-search>
+    <app-city-search (searchEvent)="doSearch($event)"></app-city-search>
   </div>
   <mat-card>
     <h2>Current Weather</h2>
-    <app-current-weather></app-current-weather>
+    <app-current-weather [current]="currentWeather"></app-current-weather>
   </mat-card>
 </div>
